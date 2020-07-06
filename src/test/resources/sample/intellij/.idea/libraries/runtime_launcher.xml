@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="runtime-launcher">
+    <CLASSES>
+      <root url="jar://C:/Program Files/Mendix/8.7.0.1476/runtime/launcher/runtimelauncher.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="userlib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/userlib/com.ibm.db2.jcc.db2jcc-db2jcc4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/com.microsoft.sqlserver.mssql-jdbc-7.2.1.jre8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/com.oracle.database.ha.ons-12.2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/com.oracle.database.ha.simplefan-12.2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/com.oracle.database.jdbc.ojdbc8-12.2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/com.oracle.database.jdbc.ucp-12.2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/com.oracle.database.security.oraclepki-12.2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/com.oracle.database.security.osdt_cert-12.2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/com.oracle.database.security.osdt_core-12.2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/com.sap.cloud.db.jdbc.ngdbc-2.3.58.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/com.zaxxer.HikariCP-2.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/org.hsqldb.hsqldb-2.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/org.mariadb.jdbc.mariadb-java-client-2.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/org.postgresql.postgresql-42.2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userlib/org.slf4j.slf4j-api-1.7.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

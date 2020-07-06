@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectId" id="1crpwJA67DAh3JtAHQV1mqjS1dC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Run" type="Application" factoryName="Application">
+      <envs>
+        <env name="M2EE_ADMIN_PASS" value="1" />
+        <env name="M2EE_ADMIN_PORT" value="8090" />
+        <env name="M2EE_CONSOLE_PATH" value="C:/Program Files/Mendix/8.7.0.1476/modeler/MendixConsoleLog.exe" />
+        <env name="MX_INSTALL_PATH" value="C:/Program Files/Mendix/8.7.0.1476" />
+        <env name="MXCONSOLE_BASE_PATH" value="$PROJECT_DIR$/deployment" />
+        <env name="MXCONSOLE_RUNTIME_LISTEN_ADDRESSES" value="*" />
+        <env name="MXCONSOLE_RUNTIME_PATH" value="C:/Program Files/Mendix/8.7.0.1476/runtime" />
+        <env name="MXCONSOLE_RUNTIME_PORT" value="8080" />
+        <env name="MXCONSOLE_SERVER_URL" value="http://127.0.0.1:8090/" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.mendix.container.boot.Main" />
+      <module name="practice1" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/deployment" />
+      <option name="VM_PARAMETERS" value="-Djava.net.preferIPv4Stack=true -Dfile.encoding=UTF-8 -DMX_LOG_LEVEL=INFO -Djava.io.tmpdir=C:\Users\nima-windows\Documents\Mendix\practice1\deployment\data\tmp -Djava.library.path=C:\Progra~1\Mendix\8.7.0.1476\runtime\lib\x64;C:\Users\nima-windows\Documents\Mendix\practice1\deployment\model\lib\userlib" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+</project>

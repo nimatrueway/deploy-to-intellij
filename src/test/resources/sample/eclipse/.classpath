@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="javasource"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/8.7.0.1476/runtime/bundles/com.mendix.json.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/8.7.0.1476/runtime/bundles/com.mendix.logging-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/8.7.0.1476/runtime/bundles/com.mendix.m2ee-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/8.7.0.1476/runtime/bundles/com.mendix.public-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/8.7.0.1476/runtime/bundles/javax.servlet-api.servlet.jar"/>
+	<classpathentry kind="lib" path="userlib/com.ibm.db2.jcc.db2jcc-db2jcc4.jar"/>
+	<classpathentry kind="lib" path="userlib/com.microsoft.sqlserver.mssql-jdbc-7.2.1.jre8.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.ha.ons-12.2.0.1.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.ha.simplefan-12.2.0.1.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.jdbc.ojdbc8-12.2.0.1.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.jdbc.ucp-12.2.0.1.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.security.oraclepki-12.2.0.1.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.security.osdt_cert-12.2.0.1.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.security.osdt_core-12.2.0.1.jar"/>
+	<classpathentry kind="lib" path="userlib/com.sap.cloud.db.jdbc.ngdbc-2.3.58.jar"/>
+	<classpathentry kind="lib" path="userlib/com.zaxxer.HikariCP-2.6.1.jar"/>
+	<classpathentry kind="lib" path="userlib/org.hsqldb.hsqldb-2.4.1.jar"/>
+	<classpathentry kind="lib" path="userlib/org.mariadb.jdbc.mariadb-java-client-2.4.0.jar"/>
+	<classpathentry kind="lib" path="userlib/org.postgresql.postgresql-42.2.9.jar"/>
+	<classpathentry kind="lib" path="userlib/org.slf4j.slf4j-api-1.7.21.jar"/>
+	<classpathentry kind="output" path="deployment/run/bin"/>
+</classpath>
