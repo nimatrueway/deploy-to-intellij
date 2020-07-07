@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectId" th:attr="id=${project_id}" />
+  <component name="RunManager">
+    <configuration name="Run" type="Application" factoryName="Application">
+      <envs>
+        <env th:each="entry: ${env_vars}" th:attr="name=${entry.key},value=${entry.value}" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" th:attr="value=${main_class}" />
+      <module th:attr="name=${project_name}" />
+      <option name="PROGRAM_PARAMETERS" th:attr="value=${program_args}" />
+      <option name="VM_PARAMETERS" th:attr="value=${vm_args}" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+</project>

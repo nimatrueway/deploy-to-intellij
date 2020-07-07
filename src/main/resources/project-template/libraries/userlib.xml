@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="userlib">
+    <CLASSES>
+        <root th:each="jar: ${classpath_user_libs}" th:attr="url=|jar://${jar}/|" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mendix-runtime">
+    <CLASSES>
+        <root th:each="jar: ${classpath_mendix_libs}" th:attr="url=|jar://${jar}/|" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
