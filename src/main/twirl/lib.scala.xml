@@ -1,0 +1,12 @@
+@(libraryName: String, jars: Seq[String])
+<component name="libraryTable">
+  <library name="@libraryName">
+    <CLASSES>
+    @for(jar <- jars) {
+        <root url="jar://@jar!/" />
+    }
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

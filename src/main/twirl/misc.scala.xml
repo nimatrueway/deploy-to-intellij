@@ -1,9 +1,11 @@
+@(jdkVersion: String)
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component
           name="ProjectRootManager"
           version="2"
-          th:attr="languageLevel=|JDK_${jdk_version}|,project-jdk-name=${jdk_version}"
+          languageLevel="JDK_@jdkVersion"
+          project-jdk-name="@jdkVersion"
           project-jdk-type="JavaSDK"
           default="false">
     <output url="file://$PROJECT_DIR$/deployment/run/bin" />
