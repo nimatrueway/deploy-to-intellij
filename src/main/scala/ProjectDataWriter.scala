@@ -1,22 +1,11 @@
 import java.io.{FileOutputStream, OutputStreamWriter, Writer}
 import java.nio.file.{Files, Path}
 import java.security.MessageDigest
-import java.util
 import java.util.Base64
 
-import org.thymeleaf.TemplateEngine
-import org.thymeleaf.context.Context
-import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
-
-import scala.jdk.CollectionConverters._
+import xml._
 
 object ProjectDataWriter {
-  private val ctx = new Context()
-  private val templateEngine = new TemplateEngine
-  private val resolver = new ClassLoaderTemplateResolver()
-  resolver.setPrefix("project-template/")
-  templateEngine.setTemplateResolver(resolver)
-
   def write(projectData: ProjectData,
             miscStream: Writer,
             modulesStream: Writer,
@@ -26,22 +15,28 @@ object ProjectDataWriter {
             userLibStream: Writer): Unit = {
     val (userLibs, mendixLibs) = projectData.classpath.partition(_.startsWith("userlib/"))
     val projectId = new String(Base64.getEncoder.encode(MessageDigest.getInstance("MD5").digest(projectData.projectName.getBytes)))
-    ctx.setVariable("jdk_version", Interpreter.findJdkVersion(projectData))
-    ctx.setVariable("project_id", projectId)
-    ctx.setVariable("project_name", projectData.projectName)
-    ctx.setVariable("working_directory", projectData.workingDirectory)
-    ctx.setVariable("main_class", projectData.mainClass)
-    ctx.setVariable("program_args", projectData.programArguments.mkString("\"", "\" \"", "\""))
-    ctx.setVariable("vm_args", projectData.vmArguments.mkString("\"", "\" \"", "\""))
-    ctx.setVariable("env_vars", new util.HashMap(projectData.environmentVariables.asJava))
-    ctx.setVariable("classpath_user_libs", userLibs.map(path => s"jar://$$PROJECT_DIR$$/$path!/").asJava)
-    ctx.setVariable("classpath_mendix_libs", mendixLibs.map(path => s"jar://$path!/").asJava)
-    templateEngine.process("misc.xml", ctx, miscStream)
-    templateEngine.process("modules.xml", ctx, modulesStream)
-    templateEngine.process("project.xml", ctx, projectImlStream)
-    templateEngine.process("workspace.xml", ctx, workspaceStream)
-    templateEngine.process("libraries/userlib.xml", ctx, userLibStream)
-    templateEngine.process("libraries/mendix_runtime.xml", ctx, mendixRuntimeStream)
+    val jdkVersion = Interpreter.findJdkVersion(projectData)
+    workspaceStream.write(
+      workspace.render(
+        projectId = projectId,
+        envVars = projectData.environmentVariables,
+        mainClass = projectData.mainClass,
+        projectName = projectData.projectName,
+        programArgs = projectData.programArguments.mkString("\"", "\" \"", "\""),
+        vmArgs = projectData.vmArguments.mkString("\"", "\" \"", "\"")
+      ).body
+    )
+    miscStream.write(misc.render(jdkVersion.toString).body)
+    projectImlStream.write(project.render().body)
+    modulesStream.write(modules.render(projectData.projectName).body)
+    userLibStream.write(lib.render(
+      libraryName = "userlib",
+      jars = userLibs.map(path => s"$$PROJECT_DIR$$/$path")
+    ).body)
+    mendixRuntimeStream.write(lib.render(
+      libraryName = "mendix-runtime",
+      jars = mendixLibs
+    ).body)
     miscStream.close()
     modulesStream.close()
     projectImlStream.close()

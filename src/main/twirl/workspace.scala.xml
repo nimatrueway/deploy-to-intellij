@@ -1,0 +1,21 @@
+@(projectId: String, envVars: Map[String, String], mainClass: String, projectName: String, programArgs: String, vmArgs: String)
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+    <component name="ProjectId" id="@projectId"/>
+    <component name="RunManager">
+        <configuration name="Run" type="Application" factoryName="Application">
+            <envs>
+                @for((key, value)<- envVars) {
+                <env name="@key" value="@value"/>
+                }
+            </envs>
+            <option name="MAIN_CLASS_NAME" value="@mainClass"/>
+            <module name="@projectName"/>
+            <option name="PROGRAM_PARAMETERS" value="@programArgs"/>
+            <option name="VM_PARAMETERS" value="@vmArgs"/>
+            <method v="2">
+                <option name="Make" enabled="true"/>
+            </method>
+        </configuration>
+    </component>
+</project>
