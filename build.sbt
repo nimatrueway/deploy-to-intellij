@@ -14,6 +14,8 @@ graalVMNativeImageOptions := {
     Nil
 }
 
+// logging
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.3.0-alpha5"
 // read/write libraries
 libraryDependencies += "com.nrinaudo" %% "kantan.xpath" % "0.5.2"
 // test libraries

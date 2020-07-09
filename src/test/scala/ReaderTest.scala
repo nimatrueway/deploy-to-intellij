@@ -9,7 +9,7 @@ class ReaderTest extends AnyFeatureSpec {
     Scenario("A regular Mendix 8.10 project deployed for eclipse")
     {
       val classLoader = Thread.currentThread.getContextClassLoader
-      val projectData = Reader.read(
+      val projectData = ProjectDataReader.read(
         classpathStream = classLoader.getResourceAsStream("sample/eclipse/.classpath"),
         projectStream = classLoader.getResourceAsStream("sample/eclipse/.project"),
         launchStream = classLoader.getResourceAsStream("sample/eclipse/practice1.launch"),
